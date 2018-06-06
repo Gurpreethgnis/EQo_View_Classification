@@ -1,0 +1,80 @@
+$spacing-unit: 16px;
+$half-spacing-unit: $spacing-unit / 2;
+$quarter-spacing-unit: $spacing-unit / 4;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #222 url(https://i.cloudup.com/B-nGjfTv8k.jpg) no-repeat;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://i.cloudup.com/B-nGjfTv8k.jpg);  
+  background-size: cover;
+}
+.options {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ddd;
+  padding: $spacing-unit * 3;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+
+  input {
+    display: none;
+  }
+  // .options > label
+  > label {
+    display: inline-block;
+    position: relative;
+    margin-right: $spacing-unit;
+    padding-left: $spacing-unit + $half-spacing-unit;
+    cursor: pointer;
+
+    // .options > label:before
+    // this creates the outer circle for faux radio button
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+    }
+
+    // .options > label:after
+    // this creates the inner circle for active faux radio button
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 8px;
+      margin-top: 0;
+      background: #fff;
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+  }
+
+  // .options :checked + label:after
+  :checked + label {
+    &:after {
+      height: 8px;
+      width: 8px;
+      margin-top: -4px;
+      left: 4px;
+    }
+  }
+}

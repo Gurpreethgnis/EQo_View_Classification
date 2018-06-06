@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Section marker</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse row justify-content-center" >
+        <span class="alert alert-success" id="alert_bar" role="alert">
+          Saved section!
+        </span>
+    </div>
+  </nav>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+      <ul class="nav nav-pills flex-column">
+
+          <% for (var key in list){%>
+            <% for (var imgId in list[key].arr){%>
+        <li class="nav-item">
+          <a href="#" class="nav-link " data-path="<%=list[key].arr[imgId]%>"><%=list[key].arr[imgId]%></a>
+        </li>
+            <%}%>
+          <%}%>
+      </ul>
+    </nav>
+    <main class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+      <h1>
+        View Classification Dashboard
+      </h1>
+
+      <div class="row justify-content-center col-md-8">
+        <input type="radio" name="pred_label" value="V1" id="V1"> <label for="V1">V1</label>
+        <input type="radio" name="pred_label" value="V2" id="V2"> <label for="V2">V2</label>
+        <input type="radio" name="pred_label" value="V3" id="V3"> <label for="V3">V3</label>
+        <!--<a id="start" href="#" class="col-sm-2">Start</a>-->
+        <!--<a id="end" href="#" class="col-sm-2">End</a>-->
+        <!--<a id="bf" href="#" class="col-sm-2">Bifurcation</a>-->
+        <!--<a id="sb" href="#" class="col-sm-2">StentBegin</a>-->
+        <!--<a id="se" href="#" class="col-sm-2">StentEnd</a>-->
+      </div>
+      <div  class="row justify-content-center col-md-8"> 
+	<input type="radio" name="pred_label" value="V4" id="V4"> <label for="V4">V4</label>
+        <input type="radio" name="pred_label" value="V5" id="V5"> <label for="V5">V5</label>
+        <input type="radio" name="pred_label" value="V6" id="V6"> <label for="V6">V6</label>
+        <input type="radio" name="pred_label" value="V7" id="V7"> <label for="V7">V7</label>
+	<!--<a id="start" href="#" class="col-sm-2">Start</a>-->
+        <!--<a id="end" href="#" class="col-sm-2">End</a>-->
+        <!--<a id="bf" href="#" class="col-sm-2">Bifurcation</a>-->
+        <!--<a id="sb" href="#" class="col-sm-2">StentBegin</a>-->
+        <!--<a id="se" href="#" class="col-sm-2">StentEnd</a>-->
+      </div>
+      <div  class="row justify-content-center col-md-8"> 
+        <input type="radio" name="pred_label" value="V8" id="V8"> <label for="V8">V8</label>
+        <input type="radio" name="pred_label" value="V9" id="V9"> <label for="V9">V9</label>
+        <input type="radio" name="pred_label" value="V10" id="V10"> <label for="V10">V10</label>
+        <input type="radio" name="pred_label" value="V11" id="V11"> <label for="V11">V11</label>
+	<!--<a id="start" href="#" class="col-sm-2">Start</a>-->
+        <!--<a id="end" href="#" class="col-sm-2">End</a>-->
+        <!--<a id="bf" href="#" class="col-sm-2">Bifurcation</a>-->
+        <!--<a id="sb" href="#" class="col-sm-2">StentBegin</a>-->
+        <!--<a id="se" href="#" class="col-sm-2">StentEnd</a>-->
+      </div>
+	<div  class="row justify-content-center col-md-8">
+        <input type="radio" name="pred_label" value="V12" id="V12"> <label for="V12">V12</label>
+        <input type="radio" name="pred_label" value="V13" id="V13"> <label for="V13">V13</label>
+        <input type="radio" name="pred_label" value="V14" id="V14"> <label for="V14">V14</label>
+        <input type="radio" name="pred_label" value="V15" id="V15"> <label for="V15">V15</label>
+        <input type="radio" name="pred_label" value="V16" id="V16"> <label for="V16">V16</label>
+        <input type="radio" name="pred_label" value="V17" id="V17"> <label for="V17">V17</label>
+        <input type="radio" name="pred_label" value="V18" id="V18"> <label for="V18">V18</label>
+        <input type="radio" name="pred_label" value="V19" id="V19"> <label for="V19">V19</label>
+        <input type="radio" name="pred_label" value="V20" id="V20"> <label for="V20">V20</label>
+        <!--<a id="start" href="#" class="col-sm-2">Start</a>-->
+        <!--<a id="end" href="#" class="col-sm-2">End</a>-->
+        <!--<a id="bf" href="#" class="col-sm-2">Bifurcation</a>-->
+        <!--<a id="sb" href="#" class="col-sm-2">StentBegin</a>-->
+        <!--<a id="se" href="#" class="col-sm-2">StentEnd</a>-->
+      </div>
+      <div class="row justify-content-center ">
+        <div class="col-sm-8 container_cmpr">
+          <img src="#" class="" id="cmpr" alt="">
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="/javascripts/bootstrap.js"></script>
+<script src="/dataset/pred_label.js"></script>
+<script>
+
+    $('#alert_bar').hide();
+    path = ""
+    $(".nav-item a").click(function(elem){
+        path = $(this).data('path');
+        $('#cmpr').attr("src","/dataset/"+path);
+        pred_id = pred_labels[path]
+        $("#"+pred_id).prop('checked', 'checked');
+
+    })
+
+    $("input[name='pred_label']").change(function(_this){
+        $.get({
+            url:"/section?id="+_this.target.id+"&path="+path
+        }).done(function () {
+            $('#alert_bar').show()
+        })
+    })
+
+
+    var startId = [];
+    $('#start').click(function(){
+        startId.push(id);
+
+    })
+
+    var endId = [];
+    $('#end').click(function(){
+        if(startId.length == endId.length){
+            endId.pop();
+        }
+        endId.push(id);
+        $.get({
+            url:"/section?path="+encodeURIComponent(path)+"&s="+startId.join(',')+"&e="+endId.join(',')+"&bf="+bifur.join(',')+"&s_stent="+startStent.join(',')+"&e_stent="+endStent.join(',')
+        }).done(function () {
+            $('#alert_bar').show()
+        })
+    })
+
+    var startStent = [];
+    $('#sb').click(function(){
+        startStent.push(id);
+
+    })
+
+    var endStent = [];
+    $('#se').click(function(){
+        if(startStent.length == endStent.length){
+            endStent.pop();
+        }
+        endStent.push(id);
+        $.get({
+            url:"/section?path="+encodeURIComponent(path)+"&s="+startId.join(',')+"&e="+endId.join(',')+"&bf="+bifur.join(',')+"&s_stent="+startStent.join(',')+"&e_stent="+endStent.join(',')
+        }).done(function () {
+            $('#alert_bar').show()
+        })
+    })
+
+    var bifur = [];
+
+    $('#bf').click(function(){
+        bifur.push(id);
+        $.get({
+            url:"/section?path="+encodeURIComponent(path)+"&s="+startId.join(',')+"&e="+endId.join(',')+"&bf="+bifur.join(',')+"&s_stent="+startStent.join(',')+"&e_stent="+endStent.join(',')
+        }).done(function () {
+            $('#alert_bar').show()
+        })
+    })
+
+</script>
+</body>
+
+
+</html>

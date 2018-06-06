@@ -1,0 +1,35 @@
+/**
+ * Created by qichang on 3/27/18.
+ */
+pred_labels= {
+    "patient1/0KXC1UFT_I23.gif": "V1",
+    "patient1/0KXC1UFT_I34.gif": "V2",
+    "patient1/0KXC1UFT_I35.gif": "V3",
+    "patient1/0KXC1UFT_I36.gif": "V4",
+    "patient1/0KXC3THI_I34.gif": "V5",
+    "patient1/0KXC3THI_I35.gif": "V6",
+    "patient1/0KXC7RKX_I41.gif": "V7",
+    "patient1/0KXCBPOB_I33.gif": "V8",
+    "patient1/0KXCBPOB_I34.gif": "V9",
+    "patient1/0KXCFNRQ_I22.gif": "V10",
+    "patient1/0KXCLKWU_I32.gif": "V11",
+    "patient1/0KXCLKWU_I63.gif": "V12",
+    "patient1/0KXCNJYJ_I79.gif": "V13",
+    "patient1/0KXCRI0Y_I32.gif": "V14",
+    "patient1/0KXCRI0Y_I37.gif": "V15",
+    "patient1/0KXCRI0Y_I40.gif": "V16",
+    "patient1/0KXCRI0Y_I63.gif": "V17",
+    "patient1/0KXCVG4C_I35.gif": "V18",
+    "patient1/0KXCXF61_I26.gif": "V19",
+    "patient1/0KXD2CB5_I32.gif": "V20",
+    "patient1/0KXD4BCV_I52.gif": "V9",
+    "patient1/0KXD6AEK_I56.gif": "V10",
+    "patient1/0KXDE6LD_I19.gif": "V11",
+    "patient1/0KXDE6LD_I26.gif": "V12",
+    "patient1/0KXDG5N2_I31.gif": "V13",
+    "patient1/0KXDG5N2_I32.gif": "V14",
+    "patient1/0KXDG5N2_I61.gif": "V15",
+    "patient1/0KXDG5N2_I66.gif": "V16",
+    "patient1/0KXDG5N2_I83.gif": "V17",
+    "patient1/0KXDI4OS_I33.gif": "V18"
+}
