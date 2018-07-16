@@ -113,16 +113,38 @@
 
     $('#alert_bar').show();
     path = ""
+	current_elem = $(".nav-item a")[0].parentNode
     $(".nav-item a").click(function(elem){
         path = $(this).data('path');
+        current_elem = $(this)[0].parentNode
         $('#cmpr').attr("src","/dataset/"+path);
         pred_id = pred_labels[path]
         $("#"+pred_id).prop('checked', 'checked');
-
     })
+	$("a.next").click(function(elem){
+		current_elem = $(current_elem).nextAll('li').first()[0]
+		if(current_elem == undefined){
+            alert("End of this list. Please reselect the item you want to review.")
+            return;
+        }
+        path = $(current_elem).children().data('path');
+        $('#cmpr').attr("src","/dataset/"+path);
+        pred_id = pred_labels[path]
+        $("#"+pred_id).prop('checked', 'checked');
+	})
 
-
-
+    $("a.previous").click(function(elem){
+        current_elem = $(current_elem).prevAll('li').first()[0]
+		if(current_elem == undefined){
+            alert("End of this list. Please reselect the item you want to review.")
+			return;
+		}
+        path = $(current_elem).children().data('path');
+        console.debug(path)
+        $('#cmpr').attr("src","/dataset/"+path);
+        pred_id = pred_labels[path]
+        $("#"+pred_id).prop('checked', 'checked');
+    })
 
 
     $("input[name='pred_label']").change(function(_this){
